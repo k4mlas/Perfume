@@ -1,0 +1,121 @@
+@import './_colors.scss';
+
+// font-family: 'Fraunces', serif;
+// font-family: 'Montserrat', sans-serif;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: $cream;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 375px;
+	border-radius: 15px;
+	background-color: $white;
+	overflow: hidden;
+
+	&__img {
+		background-image: url(../images/image-product-mobile.jpg);
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 300px;
+	}
+	&__body {
+		padding: 30px;
+	}
+	&__subtitle {
+		margin-bottom: 20px;
+		font-size: 14px;
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		color: $darkGrayIishBlue;
+	}
+	&__title {
+		margin-bottom: 20px;
+		font-family: 'Fraunces', serif;
+	}
+	&__text {
+		margin-bottom: 20px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 14px;
+		color: $darkGrayIishBlue;
+	}
+	&__price {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+	&__priceOne {
+		font-family: 'Fraunces', serif;
+		color: $darkCyan;
+		font-size: 40px;
+		font-weight: 700;
+	}
+	&__priceTwo {
+		margin-left: 20px;
+		font-family: 'Montserrat', sans-serif;
+		color: $darkGrayIishBlue;
+		font-size: 14px;
+		text-decoration: line-through;
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+		width: 100%;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		border-radius: 15px;
+		color: $white;
+		font-size: 14px;
+		background-color: $darkCyan;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.5s;
+		&:hover {
+			background-color: $veryDarkBlue;
+		}
+	}
+	&__icon {
+		margin-right: 10px;
+	}
+}
+
+.attribution {
+	margin-top: 20px;
+	font-size: 11px;
+	text-align: center;
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
+@media (min-width: 992px) {
+	.card {
+		flex-direction: row;
+		width: 700px;
+		&__img {
+			background-image: url(../images/image-product-desktop.jpg);
+			height: 100%;
+		}
+	}
+}

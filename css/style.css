@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 375px;
+  border-radius: 15px;
+  background-color: hsl(0deg, 0%, 100%);
+  overflow: hidden;
+}
+.card__img {
+  background-image: url(../images/image-product-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+.card__body {
+  padding: 30px;
+}
+.card__subtitle {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: hsl(228deg, 12%, 48%);
+}
+.card__title {
+  margin-bottom: 20px;
+  font-family: "Fraunces", serif;
+}
+.card__text {
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: hsl(228deg, 12%, 48%);
+}
+.card__price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.card__priceOne {
+  font-family: "Fraunces", serif;
+  color: hsl(158deg, 36%, 37%);
+  font-size: 40px;
+  font-weight: 700;
+}
+.card__priceTwo {
+  margin-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228deg, 12%, 48%);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.card__btn {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-radius: 15px;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 14px;
+  background-color: hsl(158deg, 36%, 37%);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.card__btn:hover {
+  background-color: hsl(212deg, 21%, 14%);
+}
+.card__icon {
+  margin-right: 10px;
+}
+
+.attribution {
+  margin-top: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media (min-width: 992px) {
+  .card {
+    flex-direction: row;
+    width: 700px;
+  }
+  .card__img {
+    background-image: url(../images/image-product-desktop.jpg);
+    height: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
